@@ -1,7 +1,7 @@
 # Zev Portfolio
 
 Personal portfolio for AI Product & Data Analyst applications.
-https://high-ui-ai-hr-ai-portfolio.vercel.app/
+(https://zevportfolio.vercel.app)
 
 ## Run Locally
 
