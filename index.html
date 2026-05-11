@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Zev Portfolio - AI Product & Data Analyst portfolio for HR and tech recruiters."
+    />
+    <title>Zev Portfolio | AI Product & Data Analyst</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <div class="ambient ambient-violet" aria-hidden="true"></div>
+      <div class="ambient ambient-blue" aria-hidden="true"></div>
+      <div class="noise-layer" aria-hidden="true"></div>
+
+      <header class="site-header" data-header>
+        <nav class="navbar" aria-label="主导航">
+          <a class="brand" href="#home" aria-label="Zev Portfolio 首页">
+            <span class="brand-mark"></span>
+            <span>Zev Portfolio</span>
+          </a>
+
+          <button class="nav-toggle" type="button" aria-label="打开导航" data-nav-toggle>
+            <span></span>
+            <span></span>
+          </button>
+
+          <div class="nav-links" data-nav-links>
+            <a href="#home">首页</a>
+            <a href="#projects">项目作品</a>
+            <a href="#education">教育背景</a>
+            <a href="#skills">能力矩阵</a>
+            <a href="#contact">联系我</a>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero-section section" id="home">
+          <div class="hero-grid">
+            <div class="hero-copy" data-parallax="0.12">
+              <p class="hero-greeting">Hi，我是肖正午</p>
+              <div class="hero-positioning" aria-label="教育背景与求职方向">
+                <p class="hero-school">UC San Diego</p>
+                <p class="hero-school-cn">加州大学圣地亚哥分校</p>
+                <p class="hero-major">Probability &amp; Statistics</p>
+                <h1 class="hero-role-cn">AI Product &amp; Data Analyst</h1>
+              </div>
+              <p class="hero-description">
+                擅长将模糊业务问题转化为清晰的产品逻辑、数据分析路径和 AI 工作流方案，并结合统计学背景保持对数据趋势、指标变化和异常信号的敏感度。
+              </p>
+
+              <div class="hero-tags" aria-label="核心关键词">
+                <span>AI Agent</span>
+                <span>数据分析</span>
+                <span>产品思维</span>
+                <span>SQL</span>
+                <span>Python</span>
+                <span>业务洞察</span>
+              </div>
+
+              <div class="hero-actions">
+                <a class="primary-action" href="#jd-console">体验 JD 匹配器</a>
+                <a class="secondary-action" href="#projects">查看代表项目</a>
+              </div>
+            </div>
+
+            <aside class="hero-panel hero-portrait-card" aria-label="Zev Xiao portrait">
+              <img src="assets/zev-portrait.jpg" alt="Zev Xiao 肖正午个人照片" />
+              <div class="hero-portrait-caption">
+                <span>AI Product &amp; Data Analyst</span>
+                <strong>Zev Xiao · 肖正午</strong>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="jd-section section" id="jd-console">
+          <div class="section-heading">
+            <p class="eyebrow">AI JD Match Console</p>
+            <h2>把岗位 JD 转成可读的匹配报告</h2>
+            <p>
+              当前阶段使用本地关键词规则生成简洁预览，下一步会扩展为完整匹配报告弹窗。
+            </p>
+          </div>
+
+          <div class="jd-console glass-panel">
+            <div class="console-topbar">
+              <div class="console-lights" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <span class="console-status">Local rules ready</span>
+            </div>
+
+            <div class="console-body">
+              <label for="jd-input">粘贴岗位 JD</label>
+              <textarea
+                id="jd-input"
+                name="jd-input"
+                rows="9"
+                placeholder="请粘贴相关岗位 JD。后续会自动识别关键词、匹配项目证据并生成结构化报告。"
+              ></textarea>
+
+              <div class="console-actions">
+                <button class="primary-action console-button" type="button" data-analyze-placeholder>
+                  开始分析匹配度
+                </button>
+                <p class="console-note">粘贴 JD 后生成一份结构化岗位匹配报告。</p>
+              </div>
+
+              <div class="match-preview" id="matchPreview" aria-live="polite">
+                <p>粘贴一段岗位 JD 后，可以在这里看到岗位匹配预览。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section strengths-section" id="strengths">
+          <div class="section-heading strengths-heading">
+            <p class="eyebrow">Core Strengths</p>
+            <h2>我的核心优势</h2>
+            <p>用 AI 产品思维、统计学背景和数据分析能力，把模糊业务问题拆成可执行的产品方案与分析路径。</p>
+          </div>
+
+          <div class="strength-grid">
+            <article class="strength-card">
+              <span class="strength-index">01</span>
+              <h3 class="strength-title">产品问题拆解</h3>
+              <p class="strength-description">能把模糊需求拆成用户场景、功能逻辑、指标口径和优先级，避免只停留在“想法”层面。</p>
+              <div class="strength-tags" aria-label="产品问题拆解关键词">
+                <span>用户场景</span>
+                <span>PRD 思维</span>
+                <span>功能优先级</span>
+              </div>
+            </article>
+
+            <article class="strength-card">
+              <span class="strength-index">02</span>
+              <h3 class="strength-title">数据分析能力</h3>
+              <p class="strength-description">具备统计学背景，熟悉 Python、SQL、Pandas、DuckDB 和指标分析，能从数据中发现趋势、异常和业务问题。</p>
+              <div class="strength-tags" aria-label="数据分析能力关键词">
+                <span>Python</span>
+                <span>SQL</span>
+                <span>指标体系</span>
+                <span>可视化</span>
+              </div>
+            </article>
+
+            <article class="strength-card">
+              <span class="strength-index">03</span>
+              <h3 class="strength-title">AI 工作流设计</h3>
+              <p class="strength-description">理解 LLM、AI Agent、Prompt Engineering、RAG 和 Tool Calling 基础概念，能把 AI 能力拆进真实业务流程。</p>
+              <div class="strength-tags" aria-label="AI 工作流设计关键词">
+                <span>AI Agent</span>
+                <span>Prompt</span>
+                <span>Workflow</span>
+                <span>RAG</span>
+              </div>
+            </article>
+
+            <article class="strength-card">
+              <span class="strength-index">04</span>
+              <h3 class="strength-title">业务理解与表达</h3>
+              <p class="strength-description">能从业务目标出发，关注转化、留存、效率、用户行为和决策支持，并把分析结果讲清楚。</p>
+              <div class="strength-tags" aria-label="业务理解与表达关键词">
+                <span>业务洞察</span>
+                <span>转化率</span>
+                <span>用户行为</span>
+                <span>报告表达</span>
+              </div>
+            </article>
+
+            <article class="strength-card">
+              <span class="strength-index">05</span>
+              <h3 class="strength-title">项目推进意识</h3>
+              <p class="strength-description">能把想法整理成产品流程、Demo、分析报告和 GitHub 项目，而不是只停留在概念讨论。</p>
+              <div class="strength-tags" aria-label="项目推进意识关键词">
+                <span>Demo</span>
+                <span>GitHub</span>
+                <span>文档</span>
+                <span>项目交付</span>
+              </div>
+            </article>
+
+            <article class="strength-card">
+              <span class="strength-index">06</span>
+              <h3 class="strength-title">学习与落地能力</h3>
+              <p class="strength-description">能快速使用 Codex、Cursor、Vercel、GitHub 等工具完成原型开发、功能验证和上线部署。</p>
+              <div class="strength-tags" aria-label="学习与落地能力关键词">
+                <span>Vibe Coding</span>
+                <span>快速原型</span>
+                <span>部署</span>
+                <span>调试</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section projects-section" id="projects">
+          <div class="section-heading projects-heading">
+            <p class="eyebrow">Selected Work</p>
+            <h2>代表项目作品</h2>
+            <p>用项目证明我对 AI 产品、数据分析和业务问题拆解的理解。</p>
+          </div>
+
+          <div class="project-bento-grid">
+            <article class="project-card project-card-featured" data-project-card="sova">
+              <div class="project-media">
+                <div class="project-media-fallback">
+                  <h3>SOVA AI</h3>
+                  <p>AI 指标异动分析 Agent</p>
+                  <span>AI Product / Agent Workflow / Data Analysis</span>
+                </div>
+                <img src="assets/sova-main.png" alt="SOVA AI 项目界面占位图" loading="lazy" />
+              </div>
+              <div class="project-content">
+                <span class="project-category">AI PRODUCT / AGENT WORKFLOW</span>
+                <p class="project-description">把“指标下跌但原因不明”的模糊业务问题，拆解成指标澄清、Metric Spec、异动分析、证据链和报告输出的 AI 工作流。</p>
+                <p class="project-value">体现 AI 产品设计、Agent 工作流设计、指标口径设计、Prompt 结构设计和数据分析链路设计能力。</p>
+                <div class="project-tags" aria-label="SOVA AI 技术标签">
+                  <span>AI Agent</span>
+                  <span>Prompt</span>
+                  <span>Metric Spec</span>
+                  <span>DuckDB</span>
+                  <span>Top Movers</span>
+                </div>
+                <div class="project-actions">
+                  <button class="project-button" type="button" data-project-detail data-project-id="sova">查看详情</button>
+                  <a class="project-button secondary" href="https://github.com/Zev55555/Sova-ai" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card project-card-featured" data-project-card="transit">
+              <div class="project-media">
+                <div class="project-media-fallback">
+                  <h3>UCSD Triton Transit</h3>
+                  <p>校园班车晚间服务缺口诊断与排班优化</p>
+                  <span>SQL / Python / GTFS / Operations Analytics</span>
+                </div>
+                <img src="assets/transit-heatmap.png" alt="UCSD Triton Transit 热力图占位图" loading="lazy" />
+              </div>
+              <div class="project-content">
+                <span class="project-category">DATA ANALYTICS / OPERATIONS</span>
+                <p class="project-description">基于 GTFS 数据分析 UCSD 校园班车晚间服务供给，识别 20:00 后尤其 21:00–22:00 的服务缺口，并提出排班优化建议。</p>
+                <p class="project-value">体现 SQL / Python 数据处理、指标体系设计、热力图可视化、运营问题诊断和业务建议能力。</p>
+                <div class="project-tags" aria-label="UCSD Triton Transit 技术标签">
+                  <span>SQL</span>
+                  <span>Python</span>
+                  <span>GTFS</span>
+                  <span>Gap Score</span>
+                  <span>可视化</span>
+                </div>
+                <div class="project-actions">
+                  <button class="project-button" type="button" data-project-detail data-project-id="transit">查看详情</button>
+                  <a class="project-button secondary" href="https://github.com/Zev55555/ucsd-triton-transit-service-gap" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-project-card="insightflow">
+              <div class="project-media">
+                <div class="project-media-fallback">
+                  <h3>InsightFlow AI</h3>
+                  <p>数据分析业务流程助手</p>
+                  <span>AI Tool / Prompt Engineering / Business Analysis</span>
+                </div>
+              </div>
+              <div class="project-content">
+                <span class="project-category">AI TOOL / BUSINESS ANALYSIS</span>
+                <p class="project-description">面向数据分析新手，将模糊业务需求转化为分析问题、指标体系、业务假设、分析路径和汇报大纲。</p>
+                <p class="project-value">体现产品原型设计、Prompt 框架设计和业务分析流程设计能力，并为 SOVA AI 提供早期产品验证。</p>
+                <div class="project-tags" aria-label="InsightFlow AI 技术标签">
+                  <span>AI Tool</span>
+                  <span>Prompt</span>
+                  <span>业务分析</span>
+                  <span>产品原型</span>
+                </div>
+                <div class="project-actions">
+                  <button class="project-button" type="button" data-project-detail data-project-id="insightflow">查看详情</button>
+                  <a class="project-button secondary" href="https://github.com/Zev55555/insightflow-ai" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-project-card="ai-exposure">
+              <div class="project-media">
+                <div class="project-media-fallback">
+                  <h3>AI Exposure Analysis</h3>
+                  <p>AI 暴露度与编程职业就业前景分析</p>
+                  <span>Statistics / Career Data / Labor Market</span>
+                </div>
+                <img src="assets/ai-exposure-chart.png" alt="AI Exposure Analysis 图表占位图" loading="lazy" />
+              </div>
+              <div class="project-content">
+                <span class="project-category">STATISTICS / CAREER DATA</span>
+                <p class="project-description">围绕 AI 暴露度与薪资、就业规模、增长预期之间的关系，整合 BLS、O*NET 和 AI exposure 数据进行分析。</p>
+                <p class="project-value">体现统计分析、职业数据研究、变量比较、相关性解释和非因果解释意识。</p>
+                <div class="project-tags" aria-label="AI Exposure Analysis 技术标签">
+                  <span>Statistics</span>
+                  <span>Pandas</span>
+                  <span>BLS</span>
+                  <span>O*NET</span>
+                  <span>Correlation</span>
+                </div>
+                <div class="project-actions">
+                  <button class="project-button" type="button" data-project-detail data-project-id="ai-exposure">查看详情</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <p class="project-detail-hint" data-project-detail-hint aria-live="polite"></p>
+        </section>
+
+        <section class="section education-section" id="education">
+          <div class="section-heading education-heading">
+            <p class="eyebrow">Education</p>
+            <h2>教育背景</h2>
+            <p>UC San Diego 统计学背景，为 AI 产品、数据分析和业务问题拆解提供数学、统计和数据方法基础。</p>
+          </div>
+
+          <div class="education-layout">
+            <article class="education-main-card">
+              <div>
+                <p class="education-kicker">University Background</p>
+                <h3 class="education-school">University of California, San Diego</h3>
+                <p class="education-school-cn">加州大学圣地亚哥分校</p>
+              </div>
+              <div class="education-degree">
+                <p>B.S. Probability and Statistics</p>
+                <span>概率与统计 本科</span>
+              </div>
+              <div class="education-meta">
+                <div>
+                  <span>预计毕业</span>
+                  <strong>2027</strong>
+                </div>
+                <div>
+                  <span>GPA</span>
+                  <strong>3.7 / 4.0</strong>
+                </div>
+                <div>
+                  <span>方向定位</span>
+                  <strong>AI Product &amp; Data Analyst</strong>
+                  <small>AI 产品经理 / 数据分析师方向</small>
+                </div>
+              </div>
+            </article>
+
+            <div class="ranking-grid" aria-label="学校排名">
+              <article class="ranking-card">
+                <span class="ranking-source">QS 2026</span>
+                <strong class="ranking-number">#66</strong>
+                <span class="ranking-label">Worldwide</span>
+                <p>World University Rankings</p>
+              </article>
+              <article class="ranking-card">
+                <span class="ranking-source">U.S. News 2026</span>
+                <strong class="ranking-number">#29</strong>
+                <span class="ranking-label">National Universities</span>
+                <p>Best Colleges</p>
+              </article>
+              <article class="ranking-card">
+                <span class="ranking-source">U.S. News 2026</span>
+                <strong class="ranking-number">#6</strong>
+                <span class="ranking-label">Public Universities</span>
+                <p>Best Colleges</p>
+              </article>
+            </div>
+          </div>
+
+          <article class="coursework-card">
+            <div class="coursework-header">
+              <p class="education-kicker">Coursework</p>
+              <h3>相关课程</h3>
+            </div>
+            <div class="coursework-grid">
+              <div class="coursework-group">
+                <h4 class="coursework-title">AI 与数据科学</h4>
+                <div class="coursework-tags">
+                  <span>Artificial Intelligence</span>
+                  <span>Data Science Practice</span>
+                  <span>Data Analysis &amp; Inference</span>
+                </div>
+              </div>
+              <div class="coursework-group">
+                <h4 class="coursework-title">统计与数学</h4>
+                <div class="coursework-tags">
+                  <span>Probability</span>
+                  <span>Mathematical Statistics</span>
+                  <span>Regression Analysis</span>
+                  <span>Linear Algebra</span>
+                  <span>Applied Linear Algebra</span>
+                  <span>Vector Calculus</span>
+                </div>
+              </div>
+              <div class="coursework-group">
+                <h4 class="coursework-title">编程与产品基础</h4>
+                <div class="coursework-tags">
+                  <span>Computer Science Basics</span>
+                  <span>Java Programming</span>
+                  <span>Business Fundamentals</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="section skills-section" id="skills">
+          <div class="section-heading skills-heading">
+            <p class="eyebrow">Skill Matrix</p>
+            <h2>能力矩阵</h2>
+            <p>按照 AI 产品经理 / 数据分析师岗位逻辑，将能力分为产品、数据、AI、业务和工具协作五类。</p>
+          </div>
+
+          <div class="skills-grid">
+            <article class="skill-card skill-card-large">
+              <h3 class="skill-card-title">产品能力</h3>
+              <p class="skill-card-description">能将业务问题拆解为用户场景、功能流程、指标口径和产品方案。</p>
+              <div class="skill-tags">
+                <span>需求拆解</span>
+                <span>用户场景</span>
+                <span>PRD 思维</span>
+                <span>产品流程</span>
+                <span>竞品分析</span>
+                <span>功能优先级</span>
+                <span>原型设计</span>
+              </div>
+            </article>
+
+            <article class="skill-card skill-card-large">
+              <h3 class="skill-card-title">数据能力</h3>
+              <p class="skill-card-description">具备统计学背景和基础数据分析能力，能够从数据中识别趋势、异常和业务问题。</p>
+              <div class="skill-tags">
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>SQL</span>
+                <span>DuckDB</span>
+                <span>Excel</span>
+                <span>统计分析</span>
+                <span>指标体系</span>
+                <span>数据可视化</span>
+                <span>报告撰写</span>
+              </div>
+            </article>
+
+            <article class="skill-card skill-card-large">
+              <h3 class="skill-card-title">AI 能力</h3>
+              <p class="skill-card-description">理解 LLM 与 AI Agent 基础概念，能够将 AI 能力嵌入业务流程和数据分析场景。</p>
+              <div class="skill-tags">
+                <span>LLM</span>
+                <span>Prompt Engineering</span>
+                <span>AI Agent</span>
+                <span>Workflow Design</span>
+                <span>RAG Basics</span>
+                <span>Tool Calling</span>
+                <span>输出评测</span>
+              </div>
+            </article>
+
+            <article class="skill-card">
+              <h3 class="skill-card-title">业务能力</h3>
+              <p class="skill-card-description">关注业务目标、指标变化、用户行为和决策支持，能把分析结果转化为清晰表达。</p>
+              <div class="skill-tags">
+                <span>转化漏斗</span>
+                <span>留存分析</span>
+                <span>增长指标</span>
+                <span>运营效率</span>
+                <span>用户行为</span>
+                <span>异常信号</span>
+                <span>决策支持</span>
+              </div>
+            </article>
+
+            <article class="skill-card">
+              <h3 class="skill-card-title">工具与协作</h3>
+              <p class="skill-card-description">能够使用现代 AI 编程和协作工具完成原型开发、功能验证、文档整理和部署。</p>
+              <div class="skill-tags">
+                <span>GitHub</span>
+                <span>VS Code</span>
+                <span>Cursor</span>
+                <span>Codex</span>
+                <span>Vercel</span>
+                <span>Figma</span>
+                <span>Jupyter Notebook</span>
+                <span>文档整理</span>
+                <span>Demo 搭建</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+      </main>
+
+      <section class="section contact-section" id="contact">
+        <div class="contact-card">
+          <div class="contact-copy">
+            <p class="eyebrow">Contact</p>
+            <h2>联系我</h2>
+            <p class="contact-subtitle">如果你正在寻找 AI 产品经理 / 数据分析师方向的实习生，欢迎通过邮件或 GitHub 联系我。</p>
+            <h3>希望用 AI 和数据做出真正有业务价值的产品。</h3>
+            <p class="contact-description">
+              我关注 AI Workflow、数据分析、指标体系和业务问题拆解，也愿意在真实团队中继续学习产品落地、数据驱动决策和跨团队协作。
+            </p>
+            <div class="contact-actions">
+              <a class="contact-button primary" href="mailto:xzw13537504508@gmail.com">Email Me</a>
+              <button class="contact-button" type="button" id="copyEmailBtn" data-email="xzw13537504508@gmail.com">Copy Email</button>
+              <a class="contact-button" href="https://github.com/Zev55555" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a class="contact-button" href="assets/Zev_Xiao_Resume.pdf" download>Download Resume</a>
+            </div>
+          </div>
+
+          <aside class="contact-side-card" aria-label="微信二维码">
+            <div class="wechat-card">
+              <div class="wechat-qr-frame">
+                <img src="assets/wechat-qr.jpg" alt="Zev Xiao 微信二维码" loading="lazy" />
+              </div>
+              <div>
+                <span>WeChat</span>
+                <strong>微信联系</strong>
+                <p>扫码添加微信，适合进一步沟通项目细节、面试安排或作品集反馈。</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <a class="footer-brand" href="#home">Zev Portfolio</a>
+          <div class="footer-meta">
+            <strong>AI Product &amp; Data Analyst</strong>
+            <span>UC San Diego · Probability &amp; Statistics</span>
+          </div>
+          <p class="footer-note">© 2026 Zev Xiao. Built with AI-assisted workflow. Focused on AI products, data analytics, and business decision-making.</p>
+        </div>
+      </footer>
+    </div>
+
+    <div class="project-modal-backdrop" id="projectDetailModal" aria-hidden="true">
+      <div class="project-modal" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle">
+        <button class="project-modal-close" type="button" aria-label="关闭项目详情" data-close-project-modal>
+          <span></span>
+          <span></span>
+        </button>
+        <div id="projectModalContent"></div>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" id="matchReportModal" aria-hidden="true">
+      <div class="match-modal" role="dialog" aria-modal="true" aria-labelledby="matchModalTitle">
+        <button class="modal-close" type="button" aria-label="关闭匹配报告" data-close-match-modal>
+          <span></span>
+          <span></span>
+        </button>
+        <div id="matchModalContent"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

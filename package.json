@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes vercel@latest dev --listen 3000 --yes",
+    "check": "node --check script.js && node --check api/analyze-jd.js"
+  }
+}

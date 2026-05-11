@@ -1,0 +1,11 @@
+.env
+.env.local
+.env.*.local
+*.env
+node_modules/
+.vercel/
+*.log
+request-test.json
+simple.json
+
+.vercel
