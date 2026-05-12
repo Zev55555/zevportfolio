@@ -383,7 +383,7 @@ const PROJECT_DETAILS = {
     methods: ["LLM", "Prompt Engineering", "Agent Workflow", "Metric Spec", "DuckDB", "Pandas", "Top Movers", "Evidence Chain"],
     links: {
       github: "https://github.com/Zev55555/Sova-ai",
-      demo: "https://sova-ai-ten.vercel.app/",
+      demo: "https://sovaai.filegear-sg.me",
     },
   },
   transit: {
