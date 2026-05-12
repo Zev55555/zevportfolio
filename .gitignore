@@ -4,6 +4,9 @@
 *.env
 node_modules/
 .vercel/
+.wrangler/
+.cloudflare-dist/
+exports/
 *.log
 request-test.json
 simple.json
