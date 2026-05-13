@@ -2,6 +2,7 @@
 
 Personal portfolio for AI Product & Data Analyst applications.
 (https://zevportfolio.vercel.app)
+（https://www.zev-5.cloud-ip.cc）
 
 ## Run Locally
 
