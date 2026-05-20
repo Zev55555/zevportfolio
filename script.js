@@ -33,10 +33,21 @@ const TARGET_RELEVANCE_KEYWORDS = [
   "增长分析",
   "用户行为",
   "AI Agent",
+  "AI Agent 产品",
+  "大模型应用",
   "大模型",
   "LLM",
   "Agent",
   "Prompt",
+  "Prompt Engineering",
+  "工作流",
+  "质量评估",
+  "质量检查",
+  "结构化输出",
+  "JD 分析",
+  "岗位匹配",
+  "Resume Matching",
+  "ATS",
   "SQL",
   "Python",
   "指标",
@@ -56,9 +67,9 @@ const TARGET_RELEVANCE_KEYWORDS = [
 const LOW_RELEVANCE_KEYWORDS = ["行政", "电话销售", "线下销售", "门店", "客服", "前台", "人事", "财务", "会计", "纯运营执行"];
 
 const RELEVANCE_GROUPS = {
-  ai: ["AI Agent", "AI 产品", "AI产品", "AI 产品经理", "大模型", "大模型产品", "LLM", "Agent", "Prompt", "Prompt Engineering", "workflow", "工作流"],
+  ai: ["AI Agent", "AI 产品", "AI产品", "AI 产品经理", "AI Agent 产品", "大模型", "大模型产品", "大模型应用", "LLM", "Agent", "Prompt", "Prompt Engineering", "workflow", "工作流", "质量评估", "质量检查"],
   data: ["数据分析", "数据分析师", "SQL", "Python", "Pandas", "指标", "指标体系", "可视化", "看板", "dashboard", "BI", "转化率", "用户行为", "业务分析", "增长分析", "产品数据"],
-  product: ["产品经理", "产品实习生", "产品需求", "用户需求", "产品逻辑", "PRD", "原型", "prototype", "产品原型", "数据产品", "B 端", "商业化", "商业化增长", "企业客户", "客户交付", "团队管理"],
+  product: ["产品经理", "产品实习生", "产品需求", "用户需求", "产品逻辑", "PRD", "原型", "prototype", "产品原型", "数据产品", "结构化输出", "JD 分析", "岗位匹配", "B 端", "商业化", "商业化增长", "企业客户", "客户交付", "团队管理"],
 };
 
 const ROLE_RELEVANCE_CONFIG = {
@@ -66,7 +77,7 @@ const ROLE_RELEVANCE_CONFIG = {
     label: "核心匹配",
     scoreFloor: 90,
     scoreCap: 95,
-    reason: "岗位职责与 AI 产品、数据分析、数据产品或指标分析方向高度重合。",
+    reason: "岗位职责与 AI 产品、AI Agent、大模型应用产品、数据产品或指标分析方向高度重合。",
   },
   strong_fit: {
     label: "强相关",
@@ -78,7 +89,7 @@ const ROLE_RELEVANCE_CONFIG = {
     label: "相邻相关",
     scoreFloor: 72,
     scoreCap: 83,
-    reason: "岗位与 AI 工具应用、信息结构化、内容策略或项目落地存在关联，但不是核心 AI 产品 / 数据分析岗位。",
+    reason: "岗位与 AI 工具应用、信息结构化、内容策略或项目落地存在关联，但不是核心 AI 产品 / AI Agent 应用岗位。",
   },
   weak_fit: {
     label: "弱相关",
@@ -90,19 +101,19 @@ const ROLE_RELEVANCE_CONFIG = {
     label: "低相关",
     scoreFloor: 45,
     scoreCap: 65,
-    reason: "岗位核心职责与 AI 产品、数据分析和统计背景的直接关联较弱。",
+    reason: "岗位核心职责与 AI Agent 应用产品、大模型应用产品和统计背景的直接关联较弱。",
   },
 };
 
 const ROLE_KEYWORD_GROUPS = {
-  aiCore: ["AI", "AIGC", "AI Agent", "Agent", "LLM", "大模型", "Prompt", "Prompt Engineering", "RAG", "Tool Calling"],
-  aiAgent: ["AI Agent", "Agent", "LLM", "Prompt", "Prompt Engineering", "RAG", "Tool Calling"],
-  productCore: ["产品经理", "产品需求", "产品原型", "用户需求", "工作流", "workflow", "产品设计", "功能设计", "PRD", "原型", "prototype"],
+  aiCore: ["AI", "AIGC", "AI Agent", "Agent", "LLM", "大模型", "Prompt", "Prompt Engineering", "RAG", "Tool Calling", "大模型应用"],
+  aiAgent: ["AI Agent", "Agent", "LLM", "Prompt", "Prompt Engineering", "RAG", "Tool Calling", "Guardrails", "质量评估"],
+  productCore: ["产品经理", "产品需求", "产品原型", "用户需求", "工作流", "workflow", "产品设计", "功能设计", "PRD", "原型", "prototype", "MVP", "结构化输出", "质量检查"],
   dataCore: ["SQL", "Python", "Pandas", "DuckDB", "数据分析", "指标", "指标体系", "看板", "dashboard", "BI", "数据清洗", "可视化"],
   growthCore: ["指标体系", "用户行为", "用户行为分析", "转化率", "留存", "增长", "增长分析", "BI", "dashboard"],
   businessCore: ["业务", "产品", "策略", "分析", "业务分析", "业务建议", "产品数据", "策略分析"],
-  agentBuild: ["workflow", "工作流", "产品", "原型", "prototype", "工具建设", "工具型产品"],
-  strongSignals: ["数据驱动", "策略分析", "产品运营", "工具建设", "指标分析", "业务分析", "用户需求", "数据产品", "AIGC 产品"],
+  agentBuild: ["workflow", "工作流", "产品", "原型", "prototype", "工具建设", "工具型产品", "结构化输出", "质量检查", "导出"],
+  strongSignals: ["数据驱动", "策略分析", "产品运营", "工具建设", "指标分析", "业务分析", "用户需求", "数据产品", "AIGC 产品", "AI Agent 产品", "大模型应用产品", "JD 分析", "简历优化", "岗位匹配"],
   adjacentSignals: [
     "AI 工具",
     "AI工具",
@@ -211,9 +222,18 @@ const MATCH_CONFIG = {
         "质量评估",
         "可解释性",
         "hallucination",
+        "Guardrails",
+        "结构化输出",
+        "质量检查",
+        "求职材料",
+        "简历优化",
+        "Resume Matching",
+        "JD Analysis",
+        "ATS",
+        "PDF Export",
       ],
-      coreKeywords: ["AI Agent", "LLM", "Prompt Engineering", "workflow", "AI 产品", "Metric Spec"],
-      evidence: "SOVA AI 将指标异动分析拆解为 Metric Spec、工具调用式计算、证据链生成和报告输出流程。",
+      coreKeywords: ["AI Agent", "LLM", "Prompt Engineering", "workflow", "AI 产品", "质量检查", "JD Analysis"],
+      evidence: "CareerFit Agent 与 SOVA AI 展示了从 JD / 业务问题输入到 Agent 工作流、结构化输出和质量检查的产品化能力。",
     },
     projectExperience: {
       label: "项目经验",
@@ -233,13 +253,19 @@ const MATCH_CONFIG = {
         "Triton Transit",
         "InsightFlow",
         "AI Exposure",
+        "CareerFit",
+        "CareerFit Agent",
+        "ATS",
+        "简历",
+        "求职材料",
+        "岗位匹配",
         "portfolio",
         "case study",
         "分析报告",
         "report",
       ],
-      coreKeywords: ["project", "GitHub", "demo", "prototype", "项目", "产品设计", "数据项目"],
-      evidence: "作品集包含 SOVA AI、UCSD Triton Transit、InsightFlow AI 和 AI Exposure 四个可展示项目。",
+      coreKeywords: ["project", "GitHub", "demo", "prototype", "项目", "产品设计", "CareerFit"],
+      evidence: "作品集包含 CareerFit Agent、SOVA AI、InsightFlow AI、UCSD Triton Transit 和 AI Exposure 等可展示项目。",
     },
     businessUnderstanding: {
       label: "业务理解",
@@ -294,6 +320,25 @@ const SENIOR_REQUIREMENT_PATTERNS = [
 
 const EVIDENCE_RULES = [
   {
+    triggers: [
+      "CareerFit",
+      "简历",
+      "求职材料",
+      "岗位匹配",
+      "JD 分析",
+      "JD Analysis",
+      "ATS",
+      "Resume Matching",
+      "Quality Check",
+      "质量检查",
+      "PDF Export",
+    ],
+    jdNeed: "JD 分析、岗位匹配与 AI Agent 产品能力",
+    evidence:
+      "CareerFit Agent 项目中，我将 Master 简历、岗位 JD、经历证据匹配、定制摘要、质量检查和 A4 PDF 导出串成 AI 求职材料定制工作流。",
+    ability: "AI Agent 应用产品设计、结构化输出、质量防护和大模型应用落地能力。",
+  },
+  {
     triggers: ["AI Agent", "LLM", "Prompt", "Prompt Engineering", "workflow", "工作流", "AI 产品", "Metric Spec", "指标异动"],
     jdNeed: "AI 产品 / Agent 工作流设计",
     evidence:
@@ -331,6 +376,61 @@ const EVIDENCE_RULES = [
 ];
 
 const PROJECT_DETAILS = {
+  careerfit: {
+    id: "careerfit",
+    title: "CareerFit Agent",
+    subtitle: "AI 求职材料匹配 Agent",
+    category: "AI Agent / LLM Product / Resume Tailoring / Quality Guardrails",
+    tags: ["AI Agent", "JD Analysis", "Resume Matching", "Quality Check", "ATS Keywords", "PDF Export"],
+    background:
+      "传统 AI 简历优化容易只做关键词堆叠或过度包装。CareerFit Agent 围绕真实岗位 JD，将 Master 简历、岗位要求、经历证据和质量检查机制串成一条 AI 求职材料定制流程，帮助生成更贴近岗位筛选逻辑、同时保持经历真实性的定制简历。",
+    gallery: [{ src: "assets/careerfit-main.png", label: "AI 简历 Agent 工作台", fallback: "CAREERFIT AGENT" }],
+    responsibilities: [
+      {
+        title: "产品定位",
+        description: "明确目标用户为求职者和转岗候选人，将岗位匹配、简历定制、质量检查定义为 AI Agent 应用产品场景。",
+      },
+      {
+        title: "JD 分析流程",
+        description: "将岗位 JD 拆解为岗位职责、硬技能、软技能、业务场景、筛选关键词和内容优先级，为后续定制提供结构化输入。",
+      },
+      {
+        title: "ResumeData 结构设计",
+        description: "将 Master 简历整理为可编辑、可复用、可导出的结构化数据，使项目经历、技能证据和岗位要求可以被稳定匹配。",
+      },
+      {
+        title: "质量防护机制",
+        description: "设计真实性检查、证据覆盖、ATS 关键词覆盖和 A4 版面适配等质量检查，降低模型编造经历或过度包装的风险。",
+      },
+      {
+        title: "导出体验",
+        description: "设计 A4 简历预览、编辑导出和 PDF 输出链路，让 AI 生成结果进入可交付、可投递的求职材料流程。",
+      },
+    ],
+    results: [
+      {
+        title: "AI 求职材料定制工作流",
+        description: "从 Master 简历导入、JD 分析、岗位匹配、定制摘要到 PDF 导出形成闭环，体现 AI Agent 应用产品的端到端流程设计。",
+      },
+      {
+        title: "结构化质量检查",
+        description: "通过质量检查机制覆盖内容真实性、岗位贴合度、ATS 关键词和版面适配，使大模型输出更可控、更可信。",
+      },
+      {
+        title: "产品化交付能力",
+        description: "项目体现了从真实求职痛点出发，完成 AI 工作流、可视化界面、交互状态和线上部署的 MVP 落地能力。",
+      },
+      {
+        title: "AI Agent 产品定位强化",
+        description: "项目与 AI 产品经理实习、AI Agent 应用产品和大模型应用产品方向高度一致，是当前作品集的核心展示项目。",
+      },
+    ],
+    methods: ["Next.js", "TypeScript", "LLM Prompt", "ResumeData Schema", "Quality Guardrails", "ATS Keywords", "PDF Export", "Vercel"],
+    links: {
+      github: "https://github.com/Zev55555/careerfit-agent",
+      demo: "https://ai-zev-ai-resume-agent-saas.vercel.app/",
+    },
+  },
   sova: {
     id: "sova",
     title: "SOVA AI",
@@ -670,15 +770,15 @@ const buildSummary = (roleRelevance) => {
 
   const summaries = {
     core_fit:
-      "候选人与该岗位的 AI 产品和数据分析能力要求高度匹配。SOVA AI 项目体现了其对 AI Agent 工作流、指标口径设计和业务问题拆解的理解；UCSD Triton Transit 项目体现了其 SQL / Python 数据处理、指标分析和可视化表达能力。整体来看，候选人具备面向 AI 产品经理 / 数据分析师实习岗位的项目基础、技术理解和学习落地能力。",
+      "候选人与该岗位的 AI 产品、AI Agent 和大模型应用产品要求高度匹配。CareerFit Agent 项目体现了其对 JD 分析、经历证据匹配、质量检查和 PDF 导出链路的产品化理解；SOVA AI 项目体现了其对 Agent 工作流、结构化输出和业务问题拆解的理解。整体来看，候选人具备面向 AI 产品经理实习、AI Agent 应用产品和大模型应用产品方向的项目基础、技术理解和落地能力。",
     strong_fit:
-      "候选人的 UCSD 统计学背景与多个 AI / 数据分析项目能够支撑该岗位对数据敏感度、指标分析和 AI 工具应用能力的要求。其项目经历覆盖 AI Agent 工作流、Prompt 结构设计、SQL / Python 数据分析和业务报告输出，整体与岗位需求匹配度较高。",
+      "候选人的项目经历覆盖 CareerFit Agent、SOVA AI 和 InsightFlow AI，能够支撑该岗位对 AI 工具应用、Agent 工作流、Prompt 结构设计和产品原型落地的要求。统计学背景和数据项目作为证据与指标判断能力补充，整体与 AI 产品和大模型应用相关岗位需求匹配度较高。",
     adjacent_fit:
       "该岗位与候选人在 AI 工具应用、信息结构化和项目落地方面存在一定关联，但岗位核心更偏内容、运营或项目支持。候选人的 AI 工作流项目和业务分析工具项目能够体现其结构化思考与 AI 应用意识，整体属于相邻相关方向。",
     weak_fit:
-      "该岗位与候选人的部分项目能力存在有限关联，主要重合点集中在信息整理、结构化表达、工具应用和项目执行层面。候选人的核心优势仍主要集中在 AI 产品、数据分析、统计背景和业务问题拆解方向。",
+      "该岗位与候选人的部分项目能力存在有限关联，主要重合点集中在信息整理、结构化表达、工具应用和项目执行层面。候选人的核心优势仍主要集中在 AI Agent 应用产品、大模型产品原型、统计背景和业务问题拆解方向。",
     low_fit:
-      "该岗位与候选人当前作品集的核心方向关联较弱。候选人的优势主要集中在 AI 产品、数据分析、统计背景和业务问题拆解方向，而该岗位的核心职责与这些能力的直接重合度有限。",
+      "该岗位与候选人当前作品集的核心方向关联较弱。候选人的优势主要集中在 AI Agent 应用产品、大模型产品原型、统计背景和业务问题拆解方向，而该岗位的核心职责与这些能力的直接重合度有限。",
   };
 
   return summaries[category] || summaries.weak_fit;

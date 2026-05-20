@@ -1,6 +1,6 @@
 # Zev Portfolio
 
-Personal portfolio for AI Product & Data Analyst applications.
+Personal portfolio for AI Product Manager Intern / AI Agent application product / LLM product applications.
 (https://zevportfolio.vercel.app)
 （https://www.zev-5.cloud-ip.cc）
 
